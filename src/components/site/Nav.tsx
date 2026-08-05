@@ -2,14 +2,16 @@ import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { HiOutlineMenuAlt4, HiOutlineX } from "react-icons/hi";
 
-const links = [
-  { label: "Home", to: "/", hash: undefined },
+type NavLink = { label: string; to: "/" | "/portfolio"; hash?: string };
+
+const links: NavLink[] = [
+  { label: "Home", to: "/" },
   { label: "About", to: "/", hash: "about" },
   { label: "Services", to: "/", hash: "services" },
   { label: "Process", to: "/", hash: "process" },
-  { label: "Portfolio", to: "/portfolio", hash: undefined },
+  { label: "Portfolio", to: "/portfolio" },
   { label: "Contact", to: "/", hash: "contact" },
-] as const;
+];
 
 export function Nav() {
   const [solid, setSolid] = useState(false);
@@ -44,7 +46,7 @@ export function Nav() {
             <li key={l.label}>
               <Link
                 to={l.to}
-                hash={l.hash}
+                {...(l.hash ? { hash: l.hash } : {})}
                 className="gold-underline font-accent text-[0.78rem] uppercase tracking-[0.18em] text-foreground/80 transition-colors hover:text-foreground"
               >
                 {l.label}
@@ -77,7 +79,7 @@ export function Nav() {
               <li key={l.label}>
                 <Link
                   to={l.to}
-                  hash={l.hash}
+                  {...(l.hash ? { hash: l.hash } : {})}
                   onClick={() => setOpen(false)}
                   className="font-accent text-xs uppercase tracking-[0.22em]"
                 >

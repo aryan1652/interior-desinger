@@ -21,7 +21,7 @@ export function PortfolioGrid({ items = gallery }: { items?: typeof gallery }) {
   return (
     <div className="grid auto-rows-[16rem] grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
       {items.map((shot, i) => (
-        <Reveal key={shot.label + i} delay={(i % 3) * 0.06} className={spans[i % spans.length]}>
+        <Reveal key={shot.label + i} delay={(i % 3) * 0.06} className={spans[i % spans.length] ?? ""}>
           <article className="group relative h-full overflow-hidden rounded-[1.75rem]">
             <img
               src={shot.src}

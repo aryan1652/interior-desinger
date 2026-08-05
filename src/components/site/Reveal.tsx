@@ -10,7 +10,7 @@ export function Reveal({
   children: ReactNode;
   delay?: number;
   y?: number;
-  className?: string;
+  className?: string | undefined;
 }) {
   return (
     <motion.div

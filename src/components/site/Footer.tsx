@@ -17,14 +17,18 @@ export function Footer() {
           <p className="eyebrow">Navigate</p>
           <ul className="mt-5 space-y-3 text-sm text-muted-foreground">
             {[
-              { l: "Home", to: "/", h: undefined },
-              { l: "About", to: "/", h: "about" },
-              { l: "Process", to: "/", h: "process" },
-              { l: "Portfolio", to: "/portfolio", h: undefined },
-              { l: "Contact", to: "/", h: "contact" },
+              { l: "Home", to: "/" as const, h: "" },
+              { l: "About", to: "/" as const, h: "about" },
+              { l: "Process", to: "/" as const, h: "process" },
+              { l: "Portfolio", to: "/portfolio" as const, h: "" },
+              { l: "Contact", to: "/" as const, h: "contact" },
             ].map((i) => (
               <li key={i.l}>
-                <Link to={i.to} hash={i.h} className="gold-underline hover:text-foreground">
+                <Link
+                  to={i.to}
+                  {...(i.h ? { hash: i.h } : {})}
+                  className="gold-underline hover:text-foreground"
+                >
                   {i.l}
                 </Link>
               </li>
