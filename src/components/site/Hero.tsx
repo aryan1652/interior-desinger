@@ -75,7 +75,8 @@ export function Hero() {
         </motion.div>
       </motion.div>
 
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_5%,var(--background)_78%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_30%,var(--background)_92%)]" />
+      <div className="pointer-events-none absolute left-1/2 top-1/2 h-[70vh] w-[min(1100px,92vw)] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(ellipse_at_center,color-mix(in_oklab,var(--background)_88%,transparent)_35%,transparent_72%)] backdrop-blur-[2px]" />
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-background to-transparent" />
 
       <motion.div
