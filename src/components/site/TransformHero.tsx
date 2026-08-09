@@ -76,7 +76,7 @@ export function TransformHero() {
           style={{ opacity: vignette }}
           className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_35%,var(--background)_100%)]"
         />
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-56 bg-gradient-to-t from-background via-background/70 to-transparent" />
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[62%] bg-gradient-to-t from-background via-background/85 to-transparent" />
 
         {/* stage rail */}
         <div className="absolute left-6 top-1/2 hidden -translate-y-1/2 lg:block">
