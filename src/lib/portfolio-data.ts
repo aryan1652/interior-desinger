@@ -1,7 +1,7 @@
-import empty from "@/assets/stage-1-empty.jpg";
-import shell from "@/assets/stage-2-shell.jpg";
-import lit from "@/assets/stage-3-light.jpg";
-import furnished from "@/assets/stage-4-furniture.jpg";
+import empty from "@/assets/stage-1-empty-real.jpg";
+import shell from "@/assets/stage-2-shell-real.jpg";
+import lit from "@/assets/stage-3-light-real.jpg";
+import furnished from "@/assets/stage-4-furniture-real.jpg";
 import finalRoom from "@/assets/stage-5-final.jpg";
 import { images } from "@/lib/site-data";
 
